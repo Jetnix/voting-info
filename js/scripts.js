@@ -1,16 +1,9 @@
-if (ageInput > 18) {
-  $('#voting-age').show();
-} else if (age === 18) {
-  alert("Now don't go crazy!");
-  $('#voting-age').show();
-} else {
-  $('#under-18').show();
-}
-});
-
 $(document).ready(function() {
-  var ageInput = parseInt($("input#age-input").val());
-  if (ageInput >= 18) {
+  var over18 = confirm("Are you over 18? Click OK for yes or Cancel for no.");
+
+  if (over18) {
     $('#voting-age').show();
+  } else {
+    $('#under-18').show();
   }
-})
+});
